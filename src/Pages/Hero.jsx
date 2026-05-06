@@ -55,7 +55,7 @@ const Hero = () => {
                         </div>
                         <div>
                             <div className="stat-val">2<span>+</span></div>
-                            <div className="stat-label">Major Projects</div>
+                            <div className="stat-label">freelance projects</div>
                         </div>
                         <div>
                             <div className="stat-val">8<span>+</span></div>
