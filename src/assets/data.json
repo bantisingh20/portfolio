@@ -1,0 +1,79 @@
+{
+  "name": "Banti Singh",
+  "designation": "Full Stack Developer",
+  "summary": "I build scalable, production-grade web applications end-to-end — from pixel-perfect UIs to high-performance backend APIs. 2.5+ years turning complex requirements into clean, maintainable code.",
+  "Herbutton": [
+    {
+      "label": "Get in Touch",
+      "type": "mail",
+      "href": ""
+    },
+    {
+      "label": "Linkedin",
+      "type": "mail",
+      "href": ""
+    },
+    {
+      "label": "Github",
+      "type": "mail",
+      "href": ""
+    }
+  ],
+  "TechSkill": [
+    {
+      "label": "Languaage",
+      "skill": ["Javascript", "TypeScript", "C#", "HTML", "CSS"]
+    },
+    {
+      "label": "FrontEnd",
+      "skill": [
+        "Angular",
+        "ReactJs",
+        "Responsive Design",
+        "Component Architecture"
+      ]
+    },
+    {
+      "label": "BackEnd",
+      "skill": ["Node.js", "Express.js", ".Net Core", "ASP.Net", "Restful APIs"]
+    },
+    {
+      "label": "Databases",
+      "skill": ["PostgreSQL", "SQL Server", "MySQL"]
+    },
+    {
+      "label": "Tools & Workflow",
+      "skill": ["Git", "Visual Studio", "GitHub", "Postman", "Agile"]
+    },
+    {
+      "label": "Strengths",
+      "skill": [
+        "Full-cycle Dev",
+        "API Integration",
+        "Performance Opt.",
+        "Problem Solving"
+      ]
+    }
+  ],
+  "Experience": [
+    {
+      "No": "1",
+      "companyName": "SETU NET Pvt Ltd",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "location": "📍 Vapi, Gujarat",
+      "designation": "Full Stack Developer",
+      "lesson": [
+        "Developed and maintained multiple EHS (Environment, Health & Safety) web applications for enterprise clients including Pidilite, Coca-Cola, HACCPBL, and Galaxy, delivering end-to-end features across frontend, backend, and deployment.",
+        "Built configurable dashboards and reporting systems with drag-and-drop layouts, custom charts, and shared dashboards used across cross-functional teams.",
+        "Handled full-stack development including backend APIs, frontend UI, and deployment on IIS servers.",
+        "Implemented authentication and security integrations including SSO and OAuth, ensuring secure enterprise-level access.",
+        "Integrated third-party APIs and managed data synchronization workflows between internal systems and external services.",
+        "Coordinated with multiple teams and vendors for requirement gathering, integration planning, and smooth delivery execution.",
+        "Independently developed modules such as Visitor Management Systems and operational workflow tools from scratch.",
+        "Designed and developed a Work Permit Management module from scratch, including permit lifecycle workflows, approval systems, role-based access, and real-time status tracking.",
+        "Led pilot phases with clients, gathered feedback, iterated features, and successfully delivered production-ready releases."
+      ]
+    }
+  ]
+}

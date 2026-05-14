@@ -8,7 +8,7 @@ const Contact = () => {
                     <div className="section-label" style={{ justifyContent: 'center' }}>Let's connect</div>
                     <h2 className="section-title reveal">Open to new roles<br />&amp; opportunities</h2>
                     <p className="contact-tagline reveal">
-                        I'm actively looking for full-stack developer roles. If you're building something interesting or have an open position, I'd love to talk.
+                        I'm actively looking for full-stack developer roles and am open to relocating anywhere. If you're building something interesting or have an open position, I'd love to talk.
                     </p>
                     <div className="contact-links reveal">
                         <a href="mailto:singhbanti9900@gmail.com" className="contact-link">

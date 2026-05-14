@@ -55,7 +55,7 @@ const Hero = () => {
                         </div>
                         <div>
                             <div className="stat-val">2<span>+</span></div>
-                            <div className="stat-label">Major Projects</div>
+                            <div className="stat-label">OutSide Projects</div>
                         </div>
                         <div>
                             <div className="stat-val">8<span>+</span></div>
@@ -81,7 +81,7 @@ const Hero = () => {
                         <div>
                             <div className="text-2xl font-bold">2<span className="text-cyan-400">+</span></div>
                             <div className="text-xs uppercase tracking-widest text-gray-500 font-mono mt-1">
-                                Major Projects
+                                OutSide Projects
                             </div>
                         </div>
 
@@ -101,6 +101,8 @@ const Hero = () => {
 
                     </div> */}
                 </div>
+
+
 
             </div>
         </>
