@@ -1,6 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import data from '../assets/data.json'
 
 const Hero = () => {
+
+    const [infodata, setInfoData] = useState(data);
+    console.log(infodata);
+
+    function calculateTotalExperience(data) {
+        let totalMonths = 0;
+
+        data.forEach(job => {
+            const start = new Date(job.startDate);
+
+            const end =
+                job.endDate === "Present"
+                    ? new Date()
+                    : new Date(job.endDate);
+
+            let months =
+                (end.getFullYear() - start.getFullYear()) * 12 +
+                (end.getMonth() - start.getMonth());
+
+            totalMonths += months;
+        });
+
+        const years = Math.floor(totalMonths / 12);
+        const months = totalMonths % 12;
+
+        return `${years}.${months}`;
+    }
+
+    const totalExp = calculateTotalExperience(data?.Experience);
+
+    console.log(totalExp);
+
     return (
         <>
             <div id="hero">
@@ -50,7 +83,7 @@ const Hero = () => {
                     </div>
                     <div className="hero-stats grid grid-cols-2 md:grid-cols-4 gap-8">
                         <div>
-                            <div className="stat-val">2.5<span>+</span></div>
+                            <div className="stat-val">{totalExp}<span>+</span></div>
                             <div className="stat-label">Years Exp.</div>
                         </div>
                         <div>

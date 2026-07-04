@@ -4,7 +4,26 @@ import data from '../assets/data.json'
 const Experience = () => {
 
     const [experienceData, setexperienceData] = useState(data?.Experience.sort((x) => x.No - x.No))
-    console.log(experienceData)
+    //console.log(experienceData)
+
+    function CalculateExperience(startDate, endDate) {
+        const startdate = new Date(startDate);
+        const enddate =
+            endDate === 'Present'
+                ? new Date()
+                : new Date(endDate);
+
+        let years = enddate.getFullYear() - startdate.getFullYear();
+        let months = enddate.getMonth() - startdate.getMonth();
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        return `${years} Years ${months} Months`;
+    }
+
     return (
         <>
             <section id="experience">
@@ -23,6 +42,9 @@ const Experience = () => {
                         <div className="exp-meta">
                             <div className="exp-company">{x.companyName}</div>
                             <div className="exp-period">{x.startDate} – {x.endDate}</div>
+                            <div className="exp-period">
+                                {CalculateExperience(x.startDate, x.endDate)}
+                            </div>
                             <div className="exp-location">{x.location}</div>
                         </div>
                         <div>
