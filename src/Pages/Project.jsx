@@ -1,54 +1,92 @@
-import React from "react";
+import { motion } from "framer-motion";
+import data from "../assets/data.json";
 
 const Project = () => {
+    const projects = data?.projects ?? [];
+
+    const handleMouseMove = (e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        e.currentTarget.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+        e.currentTarget.style.setProperty("--my", `${e.clientY - rect.top}px`);
+    };
+
     return (
-        <>
-            <section id="projects">
-                <div className="section-label">What I've built</div>
-                <h2 className="section-title">Key Projects</h2>
-                <div className="projects-grid">
+        <section id="projects">
+            <motion.div
+                className="section-label"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+            >
+                What I've built
+            </motion.div>
+            <motion.h2
+                className="section-title"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+            >
+                Key Projects
+            </motion.h2>
 
-                    <div className="project-card reveal">
-                        <div className="project-header">
-                            <div className="project-name">Dynamic Report Tool</div>
-                            <div className="project-period">May 2025 – Dec 2025</div>
-                        </div>
-                        <div className="project-stack">
-                            <span className="stack-tag">Angular</span>
-                            <span className="stack-tag">Node.js</span>
-                            <span className="stack-tag">PostgreSQL</span>
-                        </div>
-                        <ul className="project-bullets">
-                            <li>Self-service reporting platform with drag-and-drop dashboard builder (personal & shared), real-time filtering, grouping, and multi-level drill-down.</li>
-                            <li>Designed reusable chart and report components via configurable metadata — reduced developer dependency and accelerated feature delivery.</li>
-                            <li>Optimized queries and API responses to sustain consistent performance under concurrent user load.</li>
-                            <li>Export support for PDF, Excel, and CSV formats.</li>
-                        </ul>
-                    </div>
+            <div className="projects-grid">
+                {projects.map((p, index) => {
+                    const bullets = (p.bullets ?? [])
+                        .filter(b => typeof b === 'string' || b.showInWeb !== false)
+                        .map(b => typeof b === 'string' ? b : b.text);
 
-                    <div className="project-card reveal">
-                        <div className="project-header">
-                            <div className="project-name">Task & Project Management System</div>
-                            <div className="project-period">Sep 2025 – Dec 2025</div>
-                        </div>
-                        <div className="project-stack">
-                            <span className="stack-tag">React.js</span>
-                            <span className="stack-tag">.NET</span>
-                            <span className="stack-tag">SQL Server</span>
-                            <span className="stack-tag">Freelance</span>
-                        </div>
-                        <ul className="project-bullets">
-                            <li>Custom project & task management system for an architecture firm — covering task tracking, deadlines, status updates, and team assignments.</li>
-                            <li>Built site-visit scheduling & documentation module that improved coordination between office and on-site teams.</li>
-                            <li>Developed MOM (Minutes of Meeting) management for recording discussions, action items, and follow-ups per project.</li>
-                            <li>Role-based access and progress dashboards for full project visibility.</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </section>
-        </>
-    )
-}
+                    return (
+                        <motion.div
+                            className="project-card"
+                            key={index}
+                            onMouseMove={handleMouseMove}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                            whileHover={{ y: -6 }}
+                        >
+                            <div className="project-header">
+                                <div className="project-name">
+                                    {p.name}
+                                    {p.liveUrl && (
+                                        <a
+                                            href={p.liveUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            style={{
+                                                marginLeft: "8px",
+                                                fontSize: "0.75rem",
+                                                color: "var(--accent, #00e5ff)",
+                                                textDecoration: "none",
+                                                verticalAlign: "middle"
+                                            }}
+                                            title="View Live App"
+                                        >
+                                            ↗ Live
+                                        </a>
+                                    )}
+                                </div>
+                                <div className="project-period">{p.period}</div>
+                            </div>
+                            <div className="project-stack">
+                                {p.stack?.map((s, i) => (
+                                    <span className="stack-tag" key={i}>{s}</span>
+                                ))}
+                            </div>
+                            <ul className="project-bullets">
+                                {bullets.map((b, i) => (
+                                    <li key={i}>{b}</li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    );
+                })}
+            </div>
+        </section>
+    );
+};
 
 export default Project;

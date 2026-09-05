@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- PLACEHOLDER PORTRAIT — replace with your photo:
+       drop profile.jpg / profile.png into src/assets and update the import in src/Pages/Hero.jsx -->
+  <rect width="400" height="400" fill="#efede8"/>
+  <circle cx="200" cy="160" r="64" fill="#d8d5cd"/>
+  <path d="M80 400c0-66 54-110 120-110s120 44 120 110z" fill="#d8d5cd"/>
+  <text x="200" y="182" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="600" fill="#faf9f7">BS</text>
+</svg>

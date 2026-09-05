@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mockup 2 — Terminal Neon</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #05060a;
+    --panel: #0b0e16;
+    --line: #1c2130;
+    --text: #d7e0f0;
+    --muted: #6a7590;
+    --neon: #39ff14;
+    --neon2: #00d4ff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 44px 44px;
+    background-position: center;
+  }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.5rem 0; border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(6px);
+  }
+  .logo { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--neon); letter-spacing: .1em; }
+  .nav-links { display: flex; gap: 1.8rem; font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
+  .nav-links a { color: var(--muted); transition: color .2s; }
+  .nav-links a:hover { color: var(--neon); }
+  .nav-links a::before { content: '// '; color: var(--line); }
+
+  .hero { padding: 6rem 0 4rem; }
+  .prompt { font-family: 'JetBrains Mono', monospace; color: var(--neon2); font-size: .85rem; margin-bottom: 1.5rem; }
+  .prompt::before { content: '$ '; color: var(--muted); }
+  .hero h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 700; line-height: 1; letter-spacing: -.02em; }
+  .hero h1 .glow { color: var(--neon); text-shadow: 0 0 18px rgba(57,255,20,.5); }
+  .cursor { display: inline-block; width: .6ch; background: var(--neon); animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .hero p { color: var(--muted); max-width: 55ch; margin: 1.5rem 0 2rem; font-family: 'JetBrains Mono', monospace; font-size: .95rem; }
+  .actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn { font-family: 'JetBrains Mono', monospace; font-size: .85rem; padding: .7rem 1.3rem; border: 1px solid var(--neon); color: var(--neon); background: transparent; transition: all .2s; cursor: pointer; }
+  .btn:hover { background: var(--neon); color: #000; box-shadow: 0 0 24px rgba(57,255,20,.4); }
+  .btn.alt { border-color: var(--neon2); color: var(--neon2); }
+  .btn.alt:hover { background: var(--neon2); color: #000; box-shadow: 0 0 24px rgba(0,212,255,.4); }
+
+  .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 4rem 0; }
+  .stat { background: var(--panel); padding: 1.5rem; }
+  .stat b { font-size: 2rem; color: var(--neon); font-family: 'JetBrains Mono', monospace; }
+  .stat span { display: block; color: var(--muted); font-size: .75rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .1em; margin-top: .3rem; }
+
+  section { padding: 3rem 0; }
+  .sec-title { font-family: 'JetBrains Mono', monospace; color: var(--neon2); font-size: .9rem; margin-bottom: 2rem; }
+  .sec-title::before { content: '> '; color: var(--muted); }
+  .card { background: var(--panel); border: 1px solid var(--line); padding: 1.75rem; margin-bottom: 1rem; transition: border-color .2s; }
+  .card:hover { border-color: var(--neon); }
+  .card h3 { font-size: 1.15rem; }
+  .card .meta { font-family: 'JetBrains Mono', monospace; color: var(--neon); font-size: .78rem; margin: .3rem 0 1rem; }
+  .card ul { list-style: none; color: var(--muted); }
+  .card li { padding-left: 1.4rem; position: relative; margin-bottom: .5rem; font-size: .92rem; }
+  .card li::before { content: '▹'; position: absolute; left: 0; color: var(--neon2); }
+  .tags { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: 1rem; }
+  .tag { font-family: 'JetBrains Mono', monospace; font-size: .72rem; color: var(--neon2); border: 1px solid var(--line); padding: .2rem .6rem; }
+
+  footer { padding: 3rem 0; border-top: 1px solid var(--line); color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: .78rem; text-align: center; }
+
+  @media (max-width: 800px) { .stats { grid-template-columns: repeat(2,1fr); } .nav-links { display: none; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="logo">~/banti-singh</div>
+      <div class="nav-links"><a href="#">skills</a><a href="#">experience</a><a href="#">projects</a><a href="#">contact</a></div>
+      <a href="#" class="btn">hire_me()</a>
+    </nav>
+
+    <div class="hero">
+      <div class="prompt">whoami</div>
+      <h1>Banti Singh<br><span class="glow">Full Stack Dev</span><span class="cursor">&nbsp;</span></h1>
+      <p>// I build scalable, production-grade web apps end-to-end — from pixel-perfect UIs to high-performance backend APIs. 3+ years shipping clean code.</p>
+      <div class="actions">
+        <button class="btn">./contact.sh</button>
+        <button class="btn alt">./download_cv.sh</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>3+</b><span>years exp</span></div>
+      <div class="stat"><b>2+</b><span>projects</span></div>
+      <div class="stat"><b>8+</b><span>tech stack</span></div>
+      <div class="stat"><b>8.1</b><span>gpa</span></div>
+    </div>
+
+    <section>
+      <div class="sec-title">experience.log</div>
+      <div class="card">
+        <h3>Mobibox — YallaPay E-Wallet</h3>
+        <div class="meta">[Jul 2026 → present] Full Stack Developer</div>
+        <ul>
+          <li>Dynamic RBAC with granular permissions + Redis caching.</li>
+          <li>Wallet decoupling & QR-verified bank-format statements.</li>
+          <li>Resolved 59+ financial-safety audit findings.</li>
+        </ul>
+        <div class="tags"><span class="tag">.NET</span><span class="tag">Next.js</span><span class="tag">Flutter</span><span class="tag">PostgreSQL</span></div>
+      </div>
+      <div class="card">
+        <h3>SETU NET Pvt Ltd</h3>
+        <div class="meta">[Aug 2023 → Jun 2026] Full Stack Developer</div>
+        <ul>
+          <li>EHS web apps for Pidilite, Coca-Cola, Galaxy.</li>
+          <li>Configurable drag-and-drop dashboards & reports.</li>
+          <li>Work Permit Management module built from scratch.</li>
+        </ul>
+        <div class="tags"><span class="tag">Angular</span><span class="tag">.NET</span><span class="tag">SQL Server</span></div>
+      </div>
+    </section>
+
+    <footer>// built by banti singh · full stack developer · 2026</footer>
+  </div>
+</body>
+</html>
