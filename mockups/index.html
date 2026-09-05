@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio Mockups — Banti Singh</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0f; color: #e8e8f0; font-family: 'Inter', sans-serif; padding: 4rem 2rem; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 2rem; font-weight: 800; margin-bottom: .5rem; }
+  p.sub { color: #6b6b80; margin-bottom: 3rem; }
+  .list { display: grid; gap: 1rem; }
+  a.card {
+    display: flex; align-items: center; justify-content: space-between;
+    text-decoration: none; color: inherit;
+    background: #13131c; border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px; padding: 1.5rem 1.8rem; transition: border-color .2s, transform .2s;
+  }
+  a.card:hover { border-color: #00e5ff; transform: translateY(-3px); }
+  .card h2 { font-size: 1.2rem; font-weight: 700; }
+  .card small { color: #6b6b80; display: block; margin-top: .3rem; font-weight: 400; }
+  .swatch { display: flex; gap: .4rem; }
+  .sw { width: 22px; height: 22px; border-radius: 6px; border: 1px solid rgba(255,255,255,.15); }
+  .arrow { color: #00e5ff; font-size: 1.3rem; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Portfolio Mockups</h1>
+    <p class="sub">Four different directions to preview. Open each, then tell me which one to build into the React app (or mix elements).</p>
+    <div class="list">
+      <a class="card" href="1-light-minimal.html">
+        <div>
+          <h2>1 · Light Minimal</h2>
+          <small>Editorial serif type, warm off-white, orange accent. Clean & premium.</small>
+        </div>
+        <div class="swatch"><span class="sw" style="background:#f7f6f3"></span><span class="sw" style="background:#ff5a1f"></span><span class="sw" style="background:#1a1a1a"></span></div>
+      </a>
+      <a class="card" href="2-terminal-neon.html">
+        <div>
+          <h2>2 · Terminal Neon</h2>
+          <small>Dark grid, monospace, green/cyan glow. Developer-forward, techy.</small>
+        </div>
+        <div class="swatch"><span class="sw" style="background:#05060a"></span><span class="sw" style="background:#39ff14"></span><span class="sw" style="background:#00d4ff"></span></div>
+      </a>
+      <a class="card" href="3-glass-aurora.html">
+        <div>
+          <h2>3 · Glass Aurora</h2>
+          <small>Glassmorphism, gradient blobs, purple/pink/cyan. Modern SaaS feel.</small>
+        </div>
+        <div class="swatch"><span class="sw" style="background:#0e0b1e"></span><span class="sw" style="background:#7c5cff"></span><span class="sw" style="background:#ff5c9d"></span></div>
+      </a>
+      <a class="card" href="4-swiss-editorial.html">
+        <div>
+          <h2>4 · Swiss Editorial</h2>
+          <small>Sidebar layout, huge bold type, yellow accent. Magazine / brutalist.</small>
+        </div>
+        <div class="swatch"><span class="sw" style="background:#111110"></span><span class="sw" style="background:#ffe600"></span><span class="sw" style="background:#f2f0ea"></span></div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

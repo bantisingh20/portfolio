@@ -1,41 +1,63 @@
 {
   "name": "Banti Singh",
   "designation": "Full Stack Developer",
-  "summary": "I build scalable, production-grade web applications end-to-end — from pixel-perfect UIs to high-performance backend APIs. 2.5+ years turning complex requirements into clean, maintainable code.",
+  "summary": "I build scalable, production-grade web applications end-to-end — from pixel-perfect UIs to high-performance backend APIs. {years}+ years turning complex requirements into clean, maintainable code.",
+  "pdfSummary": "Full Stack Web Developer with 3+ years of experience architecting and building scalable web and mobile applications. Proven expertise in Angular, React, Next.js, .NET Core, Node.js, and Flutter. Experienced in designing enterprise EHS platforms, double-entry financial ledger systems, and high-throughput RESTful APIs.",
+  "contact": {
+    "email": "singhbanti9900@gmail.com",
+    "phone": "+91-7984263575",
+    "location": "Vapi, Gujarat, India",
+    "portfolioUrl": "https://banti-singh.netlify.app/",
+    "linkedinUrl": "https://linkedin.com/in/banti-singh-b16504273",
+    "githubUrl": "https://github.com/bantisingh-rgb"
+  },
   "Herbutton": [
     {
       "label": "Get in Touch",
       "type": "mail",
-      "href": ""
+      "href": "mailto:singhbanti9900@gmail.com"
     },
     {
       "label": "Linkedin",
-      "type": "mail",
-      "href": ""
+      "type": "link",
+      "href": "https://linkedin.com/in/banti-singh-b16504273"
     },
     {
       "label": "Github",
-      "type": "mail",
-      "href": ""
+      "type": "link",
+      "href": "https://github.com/bantisingh-rgb"
     }
   ],
   "TechSkill": [
     {
-      "label": "Languaage",
-      "skill": ["Javascript", "TypeScript", "C#", "HTML", "CSS"]
+      "label": "Languages",
+      "skill": ["JavaScript", "TypeScript", "C#", "Dart", "HTML5", "CSS3", "SQL"]
     },
     {
-      "label": "FrontEnd",
+      "label": "Frontend",
       "skill": [
         "Angular",
-        "ReactJs",
+        "React.js",
+        "Next.js",
+        "Flutter",
+        "TailwindCSS",
         "Responsive Design",
         "Component Architecture"
       ]
     },
     {
-      "label": "BackEnd",
-      "skill": ["Node.js", "Express.js", ".Net Core", "ASP.Net", "Restful APIs"]
+      "label": "Backend",
+      "skill": [
+        "Node.js",
+        "Express.js",
+        "ASP.NET Core",
+        ".NET",
+        "EF Core",
+        "RESTful APIs",
+        "Blnk Ledger",
+        "Redis",
+        "RabbitMQ"
+      ]
     },
     {
       "label": "Databases",
@@ -43,11 +65,13 @@
     },
     {
       "label": "Tools & Workflow",
-      "skill": ["Git", "Visual Studio", "GitHub", "Postman", "Agile"]
+      "skill": ["Git", "GitHub", "Visual Studio", "Postman", "Docker", "IIS", "Agile"]
     },
     {
       "label": "Strengths",
       "skill": [
+        "Fintech / E-Wallet",
+        "Double-entry Ledger",
         "Full-cycle Dev",
         "API Integration",
         "Performance Opt.",
@@ -57,23 +81,188 @@
   ],
   "Experience": [
     {
+      "No": "2",
+      "companyName": "Mobibox — YallaPay E-Wallet",
+      "startDate": "Jul 2026",
+      "endDate": "Present",
+      "location": "📍 Fintech / Digital Wallet Platform",
+      "designation": "Full Stack Developer (.NET · Next.js · Flutter)",
+      "lesson": [
+        {
+          "text": "Built a dynamic Role-Based Access Control (RBAC) system end-to-end — granular per-action permissions (view/create/edit/delete), role-driven admin sidebar, permission hooks, and Redis-backed caching with cache invalidation.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Led the wallet decoupling effort, adding OwnerType/OwnerId to the wallet model so both end-users and merchants share one wallet abstraction, with null-safe ledger owner resolution and auto wallet creation for marketplace merchants.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Implemented QR-verified account statements: server-side bank-format PDF generation (QuestPDF), a backend data API consumed by the Flutter app, a public verification portal, and embedded logo + QR watermarking.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Delivered profession-based wallet limits with a maker-checker dual-approval workflow, plus configurable balance-limit banners driven by AppConfig across web and mobile.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Hardened financial safety across the platform — remediated 59+ audit findings covering null-reference crashes, silent SQL failures, duplicate prevention, and refund/credit rollback guarantees.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Developed an Influencer Referral Program across the stack — data models, services, webhook + conversion attribution hooks (Adjust device ID), and admin portal management pages.",
+          "showInPdf": false,
+          "showInWeb": true
+        },
+        {
+          "text": "Built the Close Monitoring compliance feature — transaction tagging by monitoring period, compliance indicators/filters, and dedicated admin UI (per BRD requirements).",
+          "showInPdf": false,
+          "showInWeb": true
+        },
+        {
+          "text": "Unified the merchant admin portal into a single create wizard with shared components and multi-merchant portal-user linking, replacing fragmented per-type screens.",
+          "showInPdf": false,
+          "showInWeb": true
+        },
+        {
+          "text": "Added TOTP multi-factor authentication (backend + admin UI), Google login, and KYC document type-mismatch detection during verification.",
+          "showInPdf": false,
+          "showInWeb": true
+        },
+        {
+          "text": "Created a database migration framework (WalletMigrationRunner) that auto-runs SQL migrations on startup and a SchemaSync service that auto-detects indexes, foreign keys, and defaults from the EF Core DbContext.",
+          "showInPdf": false,
+          "showInWeb": true
+        },
+        {
+          "text": "Worked across the full stack: ASP.NET Core (.NET) APIs, Next.js/React admin dashboard, and the Flutter mobile app — including real-time order notifications, card PIN lockout, and cart/order fixes.",
+          "showInPdf": false,
+          "showInWeb": true
+        }
+      ]
+    },
+    {
       "No": "1",
       "companyName": "SETU NET Pvt Ltd",
       "startDate": "Aug 2023",
-      "endDate": "Present",
+      "endDate": "Jun 2026",
       "location": "📍 Vapi, Gujarat",
       "designation": "Full Stack Developer",
       "lesson": [
-        "Developed and maintained multiple EHS (Environment, Health & Safety) web applications for enterprise clients including Pidilite, Coca-Cola, HACCPBL, and Galaxy, delivering end-to-end features across frontend, backend, and deployment.",
-        "Built configurable dashboards and reporting systems with drag-and-drop layouts, custom charts, and shared dashboards used across cross-functional teams.",
-        "Handled full-stack development including backend APIs, frontend UI, and deployment on IIS servers.",
-        "Implemented authentication and security integrations including SSO and OAuth, ensuring secure enterprise-level access.",
-        "Integrated third-party APIs and managed data synchronization workflows between internal systems and external services.",
-        "Coordinated with multiple teams and vendors for requirement gathering, integration planning, and smooth delivery execution.",
-        "Independently developed modules such as Visitor Management Systems and operational workflow tools from scratch.",
-        "Designed and developed a Work Permit Management module from scratch, including permit lifecycle workflows, approval systems, role-based access, and real-time status tracking.",
-        "Led pilot phases with clients, gathered feedback, iterated features, and successfully delivered production-ready releases."
+        {
+          "text": "Developed and maintained multiple EHS (Environment, Health & Safety) web applications for enterprise clients including Pidilite, Coca-Cola, HACCPBL, and Galaxy, delivering end-to-end features across frontend, backend, and deployment on IIS servers.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Built configurable dashboards and reporting systems with drag-and-drop layouts, custom charts, and shared dashboards used across cross-functional teams.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Implemented authentication and security integrations including SSO and OAuth, ensuring secure enterprise-level access, and integrated third-party APIs for automated data synchronization workflows.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Collaborated closely with QA, product teams, and enterprise clients to resolve production issues, iterate on features, and deliver production-ready releases on schedule.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Independently developed modules such as Visitor Management Systems and operational workflow tools from scratch.",
+          "showInPdf": false,
+          "showInWeb": true
+        },
+        {
+          "text": "Designed and developed a Work Permit Management module from scratch, including permit lifecycle workflows, approval systems, role-based access, and real-time status tracking.",
+          "showInPdf": false,
+          "showInWeb": true
+        },
+        {
+          "text": "Coordinated with multiple teams and vendors for requirement gathering, integration planning, and smooth delivery execution.",
+          "showInPdf": false,
+          "showInWeb": true
+        },
+        {
+          "text": "Led pilot phases with clients, gathered feedback, iterated features, and successfully delivered production-ready releases.",
+          "showInPdf": false,
+          "showInWeb": true
+        }
       ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Dynamic Report Tool",
+      "period": "May 2025 – Dec 2025",
+      "stack": ["Angular", "Node.js", "PostgreSQL"],
+      "liveUrl": "https://report-tool-swart.vercel.app",
+      "showInPdf": true,
+      "bullets": [
+        {
+          "text": "Developed a self-service reporting and dashboard platform enabling users to create custom reports and charts with drag-and-drop dashboard configuration, real-time filtering, grouping, multi-level drill-down, and export (PDF, Excel, CSV).",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Designed reusable chart and report components with configurable metadata, reducing developer dependency and enabling faster feature delivery.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Optimized SQL queries and backend API responses to support concurrent users with consistent sub-second performance.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Export support for PDF, Excel, and CSV formats with asynchronous job queues.",
+          "showInPdf": false,
+          "showInWeb": true
+        }
+      ]
+    },
+    {
+      "name": "Task & Project Management System (Freelance)",
+      "period": "Sep 2025 – Dec 2025",
+      "stack": ["React.js", ".NET", "SQL Server"],
+      "liveUrl": "",
+      "showInPdf": true,
+      "bullets": [
+        {
+          "text": "Designed and developed a custom project and task management system for an architecture company to manage ongoing projects efficiently with task tracking, status updates, deadlines, and team assignments.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Built modules for site visit scheduling and documentation, improving coordination between office and on-site teams.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Developed MOM (Minutes of Meeting) management to record discussions, action items, and follow-ups for each project.",
+          "showInPdf": true,
+          "showInWeb": true
+        },
+        {
+          "text": "Created role-based access and dashboards to provide clear visibility of project progress and responsibilities.",
+          "showInPdf": true,
+          "showInWeb": true
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "Savitribai Phule Pune University",
+      "period": "June 2020 – June 2023",
+      "gpa": "8.13/10",
+      "showInPdf": true
     }
   ]
 }

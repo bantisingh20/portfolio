@@ -1,0 +1,118 @@
+% ATS-Friendly Resume for Banti Singh
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.55in]{geometry}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Formatting
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\raggedright
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+
+% Bullet styling for ATS itemize lists (guarantees bullet dots always render)
+\setlist[itemize]{label=\textbullet, leftmargin=16pt, labelsep=6pt, itemsep=1.5pt, topsep=2pt, parsep=0pt}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\LARGE\textbf{BANTI SINGH}} \\
+    \vspace{3pt}
+    \href{mailto:singhbanti9900@gmail.com}{singhbanti9900@gmail.com} $|$ 
+    \href{tel:+917984263575}{+91-7984263575} $|$ 
+    \href{https://banti-singh.netlify.app/}{Portfolio} $|$ 
+    \href{https://linkedin.com/in/banti-singh-b16504273}{LinkedIn} $|$ 
+    \href{https://github.com/bantisingh-rgb}{GitHub}
+\end{center}
+
+\vspace{-8pt}
+
+% Professional Summary
+\section{Professional Summary}
+Full Stack Web Developer with 3+ years of experience architecting and building scalable web and mobile applications. Proven expertise in Angular, React, Next.js, .NET Core, Node.js, and Flutter. Experienced in designing enterprise EHS platforms, double-entry financial ledger systems, and high-throughput RESTful APIs.
+
+% Skills
+\section{Technical Skills}
+\textbf{Languages:} JavaScript, TypeScript, C\#, Dart, HTML5, CSS3, SQL \\
+\textbf{Frontend:} Angular, React.js, Next.js, Flutter, TailwindCSS, Responsive Design, Component Architecture \\
+\textbf{Backend:} Node.js, Express.js, ASP.NET Core, .NET, EF Core, RESTful APIs, Blnk Ledger, Redis, RabbitMQ \\
+\textbf{Databases:} PostgreSQL, SQL Server, MySQL \\
+\textbf{Tools \& DevOps:} Git, GitHub, Visual Studio, Postman, Docker, IIS, Agile \\
+
+% Work Experience
+\section{Professional Experience}
+
+\textbf{Full Stack Developer (.NET · Next.js · Flutter)} \hfill \textbf{Jul 2026 -- Present} \\
+\textit{Mobibox — YallaPay E-Wallet} \hfill \textit{Fintech / Digital Wallet Platform}
+\vspace{-6pt}
+\begin{itemize}[label=\textbullet, leftmargin=16pt, labelsep=6pt, itemsep=1.5pt]
+    \item Built a dynamic Role-Based Access Control (RBAC) system end-to-end — granular per-action permissions (view/create/edit/delete), role-driven admin sidebar, permission hooks, and Redis-backed caching with cache invalidation.
+    \item Led the wallet decoupling effort, adding OwnerType/OwnerId to the wallet model so both end-users and merchants share one wallet abstraction, with null-safe ledger owner resolution and auto wallet creation for marketplace merchants.
+    \item Implemented QR-verified account statements: server-side bank-format PDF generation (QuestPDF), a backend data API consumed by the Flutter app, a public verification portal, and embedded logo + QR watermarking.
+    \item Delivered profession-based wallet limits with a maker-checker dual-approval workflow, plus configurable balance-limit banners driven by AppConfig across web and mobile.
+    \item Hardened financial safety across the platform — remediated 59+ audit findings covering null-reference crashes, silent SQL failures, duplicate prevention, and refund/credit rollback guarantees.
+\end{itemize}
+
+\vspace{3pt}
+
+\textbf{Full Stack Developer} \hfill \textbf{Aug 2023 -- Jun 2026} \\
+\textit{SETU NET Pvt Ltd} \hfill \textit{Vapi, Gujarat}
+\vspace{-6pt}
+\begin{itemize}[label=\textbullet, leftmargin=16pt, labelsep=6pt, itemsep=1.5pt]
+    \item Developed and maintained multiple EHS (Environment, Health \& Safety) web applications for enterprise clients including Pidilite, Coca-Cola, HACCPBL, and Galaxy, delivering end-to-end features across frontend, backend, and deployment on IIS servers.
+    \item Built configurable dashboards and reporting systems with drag-and-drop layouts, custom charts, and shared dashboards used across cross-functional teams.
+    \item Implemented authentication and security integrations including SSO and OAuth, ensuring secure enterprise-level access, and integrated third-party APIs for automated data synchronization workflows.
+    \item Collaborated closely with QA, product teams, and enterprise clients to resolve production issues, iterate on features, and deliver production-ready releases on schedule.
+\end{itemize}
+
+% Projects
+\section{Key Projects}
+
+\textbf{\href{https://report-tool-swart.vercel.app}{\underline{\textcolor{blue}{Dynamic Report Tool}}}} $|$ 
+\textit{Angular, Node.js, PostgreSQL}
+(\href{https://report-tool-swart.vercel.app}{\underline{\textcolor{blue}{Live View}}})
+\hfill \textbf{May 2025 – Dec 2025}
+\vspace{-6pt}
+\begin{itemize}[label=\textbullet, leftmargin=16pt, labelsep=6pt, itemsep=1.5pt]
+    \item Developed a self-service reporting and dashboard platform enabling users to create custom reports and charts with drag-and-drop dashboard configuration, real-time filtering, grouping, multi-level drill-down, and export (PDF, Excel, CSV).
+    \item Designed reusable chart and report components with configurable metadata, reducing developer dependency and enabling faster feature delivery.
+    \item Optimized SQL queries and backend API responses to support concurrent users with consistent sub-second performance.
+\end{itemize}
+
+\vspace{3pt}
+
+\textbf{Task \& Project Management System (Freelance)} $|$ 
+\textit{React.js, .NET, SQL Server}
+\hfill \textbf{Sep 2025 – Dec 2025}
+\vspace{-6pt}
+\begin{itemize}[label=\textbullet, leftmargin=16pt, labelsep=6pt, itemsep=1.5pt]
+    \item Designed and developed a custom project and task management system for an architecture company to manage ongoing projects efficiently with task tracking, status updates, deadlines, and team assignments.
+    \item Built modules for site visit scheduling and documentation, improving coordination between office and on-site teams.
+    \item Developed MOM (Minutes of Meeting) management to record discussions, action items, and follow-ups for each project.
+    \item Created role-based access and dashboards to provide clear visibility of project progress and responsibilities.
+\end{itemize}
+
+% Education
+\section{Education}
+
+\textbf{Bachelor of Science in Computer Science} \hfill \textbf{June 2020 – June 2023} \\
+\textit{Savitribai Phule Pune University} \hfill GPA: 8.13/10
+
+\end{document}

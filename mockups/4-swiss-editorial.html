@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mockup 4 — Swiss Editorial</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #111110;
+    --paper: #f2f0ea;
+    --ink: #111110;
+    --muted: #8a877d;
+    --accent: #ffe600;
+    --line: #2a2a27;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--paper); font-family: 'Archivo', sans-serif; line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .grid { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+
+  /* sidebar */
+  aside { border-right: 1px solid var(--line); padding: 2.5rem 2rem; position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+  .brand { font-weight: 900; font-size: 1.6rem; letter-spacing: -.03em; }
+  .brand em { color: var(--accent); font-style: normal; }
+  .side-nav { display: flex; flex-direction: column; gap: 1rem; margin-top: 3rem; font-family: 'IBM Plex Mono', monospace; font-size: .85rem; }
+  .side-nav a { color: var(--muted); transition: color .2s; }
+  .side-nav a:hover { color: var(--accent); }
+  .side-nav a span { color: var(--line); margin-right: .5rem; }
+  .side-foot { font-family: 'IBM Plex Mono', monospace; font-size: .72rem; color: var(--muted); }
+
+  main { padding: 3rem 4rem; }
+  .kicker { font-family: 'IBM Plex Mono', monospace; font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 900; line-height: .92; letter-spacing: -.03em; margin: 1.5rem 0; text-transform: uppercase; }
+  .lead { font-size: 1.15rem; color: var(--muted); max-width: 46ch; margin-bottom: 2.5rem; }
+  .actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; }
+  .btn { font-family: 'IBM Plex Mono', monospace; font-size: .85rem; padding: .85rem 1.5rem; cursor: pointer; transition: all .15s; }
+  .btn-fill { background: var(--accent); color: var(--ink); font-weight: 500; }
+  .btn-fill:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 var(--paper); }
+  .btn-line { border: 1px solid var(--paper); color: var(--paper); }
+  .btn-line:hover { background: var(--paper); color: var(--ink); }
+
+  .stat-row { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .stat-row .s { padding: 1.5rem 0; border-right: 1px solid var(--line); }
+  .stat-row .s:last-child { border-right: none; }
+  .stat-row b { font-size: 2.6rem; font-weight: 900; display: block; }
+  .stat-row span { font-family: 'IBM Plex Mono', monospace; font-size: .72rem; color: var(--muted); text-transform: uppercase; }
+
+  section { padding: 3.5rem 0; }
+  section h2 { font-size: 1rem; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: .2em; color: var(--muted); margin-bottom: 2rem; }
+  .job { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--line); }
+  .job:hover { background: rgba(255,230,0,.03); }
+  .job h3 { font-size: 1.5rem; font-weight: 800; }
+  .job .when { font-family: 'IBM Plex Mono', monospace; font-size: .8rem; color: var(--accent); margin-top: .4rem; }
+  .job ul { list-style: none; color: var(--muted); }
+  .job li { padding-left: 1.5rem; position: relative; margin-bottom: .6rem; }
+  .job li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+
+  @media (max-width: 860px) {
+    .grid { grid-template-columns: 1fr; }
+    aside { position: static; height: auto; flex-direction: row; align-items: center; }
+    .side-nav { display: none; }
+    main { padding: 2rem 1.5rem; }
+    .stat-row { grid-template-columns: repeat(2,1fr); }
+    .job { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <aside>
+      <div>
+        <div class="brand">BANTI<em>.</em></div>
+        <nav class="side-nav">
+          <a href="#"><span>01</span>Skills</a>
+          <a href="#"><span>02</span>Experience</a>
+          <a href="#"><span>03</span>Projects</a>
+          <a href="#"><span>04</span>Contact</a>
+        </nav>
+      </div>
+      <div class="side-foot">Vapi, Gujarat<br>India · 2026</div>
+    </aside>
+
+    <main>
+      <div class="kicker">Full Stack Developer</div>
+      <h1>Banti<br>Singh</h1>
+      <p class="lead">I build scalable, production-grade web applications end-to-end — from pixel-perfect UIs to high-performance backend APIs. 3+ years of clean, maintainable code.</p>
+      <div class="actions">
+        <button class="btn btn-fill">Get in touch</button>
+        <button class="btn btn-line">Download CV</button>
+      </div>
+
+      <div class="stat-row">
+        <div class="s"><b>3+</b><span>Years Exp</span></div>
+        <div class="s"><b>2+</b><span>Projects</span></div>
+        <div class="s"><b>8+</b><span>Technologies</span></div>
+        <div class="s"><b>8.1</b><span>GPA</span></div>
+      </div>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="job">
+          <div>
+            <h3>Mobibox — YallaPay</h3>
+            <div class="when">Jul 2026 — Present</div>
+          </div>
+          <ul>
+            <li>Dynamic RBAC system with granular permissions + Redis caching.</li>
+            <li>Wallet decoupling and QR-verified bank-format statements.</li>
+            <li>Resolved 59+ financial-safety audit findings.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div>
+            <h3>SETU NET Pvt Ltd</h3>
+            <div class="when">Aug 2023 — Jun 2026</div>
+          </div>
+          <ul>
+            <li>EHS web apps for Pidilite, Coca-Cola, and Galaxy.</li>
+            <li>Configurable drag-and-drop dashboards and reporting.</li>
+            <li>Work Permit Management module built from scratch.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
